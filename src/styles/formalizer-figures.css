@@ -1,0 +1,42 @@
+/* Visual study for the Formalizer article. Deliberately scoped to its figures. */
+.formalizer-figure { margin-block: 2.5rem; }
+.app-prose .formalizer-figure img { display: block; width: 100%; height: auto; margin: 0; border: 0; border-radius: 3px; }
+.app-prose .formalizer-figure figcaption { margin-top: .85rem; color: var(--muted-foreground); font-size: .8125rem; line-height: 1.65; opacity: 1; }
+.formalizer-art { margin-block: 1.75rem 2.5rem; }
+.formalizer-diagram { padding-block: 1.5rem 0; border-top: 1px solid var(--border); }
+/* Fixed compositions scale uniformly with the article width. */
+.formalizer-boundary-layout { display: block; width: 100%; max-width: 620px; height: auto; margin: .5rem auto 0; }
+.formalizer-boundary-layout text { fill: var(--foreground); font-family: inherit; }
+.formalizer-boundary-layout .boundary-label { fill: var(--muted-foreground); font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 1px; }
+.formalizer-boundary-layout .boundary-text { font-size: 16px; font-weight: 600; }
+.formalizer-boundary-layout .boundary-note { font-size: 12px; }
+.formalizer-boundary-layout .boundary-muted { fill: var(--muted-foreground); }
+.formalizer-boundary-layout .boundary-accent { fill: var(--accent); }
+.boundary-paper { fill: none; stroke: var(--border); }
+.boundary-lean { fill: color-mix(in srgb, var(--accent) 4%, var(--background)); stroke: color-mix(in srgb, var(--accent) 35%, var(--border)); }
+.boundary-translation, .boundary-proof { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.boundary-translation { stroke-dasharray: 3 3; }
+.formalizer-boundary-layout marker path { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+
+/* A git branch makes the isolation and merge boundary visible. */
+.formalizer-branch { display: block; width: 100%; max-width: 620px; height: auto; margin: .5rem auto 0; overflow: visible; }
+.formalizer-branch text { fill: var(--foreground); font-family: inherit; }
+.formalizer-branch .branch-label { fill: var(--muted-foreground); font: 600 12px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 1px; }
+.formalizer-branch .branch-accent { fill: var(--accent); }
+.formalizer-branch .branch-text { font-size: 14px; font-weight: 500; }
+.formalizer-branch .branch-note { fill: var(--muted-foreground); font-size: 13px; }
+.branch-main { fill: none; stroke: var(--foreground); stroke-width: 2; }
+.branch-route, .branch-loop { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.branch-dot { fill: var(--background); stroke: var(--foreground); stroke-width: 2; }
+.branch-worktree { fill: var(--background); stroke: var(--border); stroke-width: 1; }
+.branch-review { fill: var(--background); stroke: var(--accent); stroke-width: 1; }
+.formalizer-branch marker path { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+
+@media (min-width: 1000px) { .formalizer-wide { width: min(1100px, calc(100vw - 96px)); margin-left: 50%; transform: translateX(-50%); } }
+
+/* The remaining CLI workflow, kept as a single quiet row. */
+.formalizer-pipeline { margin-block: 1.5rem 2rem; }
+.formalizer-pipeline svg { display: block; width: 100%; max-width: 620px; height: auto; margin-inline: auto; }
+.formalizer-pipeline rect { fill: none; stroke: var(--border); }
+.formalizer-pipeline text { fill: var(--foreground); font: 13px var(--font-mono, ui-monospace, monospace); text-anchor: middle; }
+.formalizer-pipeline .pipeline-link, .formalizer-pipeline marker path { fill: none; stroke: var(--accent); stroke-width: 1.5; }
